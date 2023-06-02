@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="{{url_for('static',filename='styles/index.css')}}">
+        <link rel="shortcut icon"
+            href="{{url_for('static',filename='assets/images/sphere-logo.ico')}}"
+            type="image/x-icon">
+        <script defer
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <title>Sphere</title>
+    </head>
+    <body>
+        <main class="main-container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../static/assets/images/sphere-logo.png"
+                        alt="logo" height="50px" width="50px">
+                    <h1><strong>sphere</strong></h1>
+                </div>
+                <h2 style="color: #0c3b34;">
+                    Películas
+                </h2>
+            </div>
+            <div class="panel">
+                <div class="search">
+                    <h3><strong>Ingresa nombre de película</strong></h3>
+                    <form class="form" action="POST">
+                        <input type="text" name="titleMovie" id="titleMovie">
+                        <button type="submit" class="btn"> Recomendar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="display">
+                <div class="content">
+                    <div class="title">
+                        <h2><strong>Resultados</strong></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <p><strong>
+                            Sistema de recomendación - IA.
+                        </strong></p>
+                </div>
+                <div class="container">
+                    <p><strong>
+                            18100145 - 18100149 - 18100157
+                        </strong></p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
