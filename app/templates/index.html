@@ -11,6 +11,8 @@
             type="image/x-icon">
         <script defer
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script defer src="{{url_for('static', filename='js/functions.js')}}"></script>
+        <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>Sphere</title>
     </head>
     <body>
@@ -28,16 +30,26 @@
             <div class="panel">
                 <div class="search">
                     <h3><strong>Ingresa nombre de película</strong></h3>
-                    <form class="form" action="POST">
-                        <input type="text" name="titleMovie" id="titleMovie">
+                    <form id="formulario" class="form" action="POST">
+                        <input type="text" name="titleMovie" id="titleMovie"
+                            for="titleMovie">
                         <button type="submit" class="btn"> Recomendar</button>
                     </form>
                 </div>
             </div>
             <div class="display">
                 <div class="content">
-                    <div class="title">
-                        <h2><strong>Resultados</strong></h2>
+                    <div class="tab">
+                        <button class="tablinks"
+                            onclick="openCity(event, 'Similares')">Similares</button>
+                        <button class="tablinks"
+                            onclick="openCity(event, 'Recs')">Recomendaciones</button>
+                    </div>
+                    <div id="Similares" class="container-table tabcontent">
+                        <div id="table"></div>
+                    </div>
+                    <div id="Recs" class="container-table tabcontent">
+                        <div id="table2"></div>
                     </div>
                 </div>
             </div>
